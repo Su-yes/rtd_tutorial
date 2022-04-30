@@ -1,6 +1,6 @@
 numpydoc
 numpy
 tables
-sphinx
+sphinx==4.4
 sphinx_rtd_theme
 matplotlib
