@@ -7,10 +7,12 @@ Welcome to test's documentation!
 ================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Contents:
 
    modules
+   
+   sushi_math
 
 
 Indices and tables

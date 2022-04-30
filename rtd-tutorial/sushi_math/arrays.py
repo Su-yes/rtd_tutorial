@@ -11,8 +11,6 @@ A collection of the math routines.
 import math
 import numpy as np
 
-from sushi_utils.utils import print_warn
-
 class rotate:
     
     @staticmethod
@@ -38,7 +36,7 @@ class rotate:
 
 # =============================================================================
 
-def reorder_array (mat, key, group = 1, axis = 0, return_key = False):
+def reorder_array (a):
     '''
     Positional Req:
         mat (ndarray): Matrix or vector you are trying to sort.
@@ -60,69 +58,5 @@ def reorder_array (mat, key, group = 1, axis = 0, return_key = False):
 
     '''
     
-    m, n = mat.shape
-    mat_grouped = []
-    mat_dict = {}
-        
-    if axis == 0:
-        # sort the rows 
-        
-        # Check for exact # of groups
-        if m % group != 0:
-            print_warn()
-            print("There must be an exact number of groups.\nCheck the size of matrix and the number of groups.\n")
-        
-        
-        # Group rows
-        for i in range(0, m, group):
-            mat_grouped.append(mat[i:i+group,:])
-
-
-        # make a dictionary {row: row vec}
-        # or, {nodes: phi}
-        for i in range(0, len(key)):
-            mat_dict[key[i]] = mat_grouped[i]
-        
-        # Sort the dictionary
-        temp = dict(sorted(mat_dict.items()))
-        
-        key_sorted = list(temp.keys())
-        mat_sorted = np.concatenate(list(temp.values()), axis = 0)
-        
-        if return_key:
-            return mat_sorted, key_sorted
-        else:
-            return mat_sorted
-     
-    elif axis == 1:
-        # sort the columns 
-        
-       
-        # Check for exact # of groups
-        if n % group != 0:
-            print_warn()
-            print("There must be an exact number of groups.\nCheck the size of matrix and the number of groups.\n")
-        
-        # Group columns
-        for i in range(0, n, group):
-            mat_grouped.append(mat[:,i:i+group])
-        
-        # make a dictionary {column number: col vec}
-        # or, {mode number: DOF values}
-        for i in range(0, n, group):
-            mat_dict[key[i]] = mat_grouped[i]
-            
-        
-        # Sort the dictionary
-        temp = dict(sorted(mat_dict.items()))
-        
-        key_sorted = list(temp.keys())
-        mat_sorted = np.column_stack(list(temp.values()))
-        
-        if return_key:
-            return mat_sorted, key_sorted
-        else:
-            return mat_sorted
-        
-    
-    
+    if a == 2:
+      return a   
