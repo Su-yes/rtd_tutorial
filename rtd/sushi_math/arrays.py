@@ -10,6 +10,8 @@ A collection of the math routines.
 
 import math
 import numpy as np
+import tables
+import matplotlib.pyplot as plt
 
 class rotate:
     

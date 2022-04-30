@@ -1,5 +1,5 @@
-rtd-tutorial
-============
+rtd
+===
 
 .. toctree::
    :maxdepth: 4
