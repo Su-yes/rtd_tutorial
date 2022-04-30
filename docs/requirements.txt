@@ -2,5 +2,5 @@ numpydoc
 numpy
 tables
 sphinx==4.4
-sphinx_rtd_theme
+sphinx_rtd_theme==1.0.0
 matplotlib
